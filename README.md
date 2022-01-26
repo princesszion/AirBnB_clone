@@ -18,4 +18,4 @@ Personal Studies to clone the AirBnB application and website including the datab
 ## Authors
 
 * Kimae Ngowa
-* Victory Victorine
+* Maikem Victorine
