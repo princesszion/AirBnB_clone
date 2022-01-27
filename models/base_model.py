@@ -7,6 +7,8 @@ Defines class BaseModel that defines all common attributes/methods for other cla
 
 import uuid
 from datetime import datetime
+import models
+#from engine.file_storage import FileStorage
 
 class BaseModel:
     """
@@ -48,6 +50,8 @@ class BaseModel:
     def save(self):
         """Updates updated_at with current datetime"""
         self.updated_at = datetime.now()
+        models.storage.save()
+
     
     def to_dict(self):
         """
