@@ -7,6 +7,12 @@ Contains the FileStorage class model
 import json
 
 from models.base_model import BaseModel
+from models.amenity import Amenity
+from models.user import User
+from models.state import State
+from models.city import City
+from models.place import Place
+from models.review import Review
 
 
 
@@ -52,3 +58,17 @@ class FileStorage:
                     self.new(eval(obj["__class__"])(**obj))
         except FileNotFoundError:
             return
+
+    def classes(self):
+        """
+        Returns alist of classes
+        """
+        classes = {
+                "BaseModel": BaseModel,
+                "User": User,
+                "Place": Place,
+                "Amenity": Amenity,
+                "City": City,
+                "Review": Review
+                }
+        return classes
